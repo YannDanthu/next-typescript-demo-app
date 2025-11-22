@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js TypeScript Demo Apps
 
-## Getting Started
+This repository contains multiple Next.js demo applications showcasing different features and patterns.
 
-First, run the development server:
+## Repository Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+/
+├── tsconfig.json                              # Shared TypeScript configuration
+├── todo-list-in-memory-with-server-action/    # Todo app with SSE and server actions
+└── README.md                                   # This file
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo Applications
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Todo List with In-Memory Storage and Server Actions
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Location:** `todo-list-in-memory-with-server-action/`
+
+A todo list application demonstrating:
+- Next.js 15 with App Router
+- Server Actions for data mutations
+- Server-Sent Events (SSE) for real-time updates
+- In-memory state management
+- TypeScript strict mode
+
+**To run:**
+```bash
+cd todo-list-in-memory-with-server-action
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## Shared Configuration
+
+All apps extend the root `tsconfig.json` which provides:
+- Strict TypeScript settings
+- ES5 target for broad compatibility
+- Modern module resolution
+- JSX preservation for Next.js
+
+Each app has its own `tsconfig.json` that extends the base configuration with app-specific settings.
+
+## Adding New Demo Apps
+
+1. Create a new folder at the root level
+2. Add a `tsconfig.json` that extends `../tsconfig.json`
+3. Set up your Next.js app inside the folder
+4. Update this README with the new app details
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
